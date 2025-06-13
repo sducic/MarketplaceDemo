@@ -72,10 +72,26 @@
 		932450D22DFC816F00C914AC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				932450D52DFC858600C914AC /* MainVC.swift */,
-				932450C62DFC7FD300C914AC /* HomeVC.swift */,
+				932450D82DFC8C1800C914AC /* MainVC */,
+				932450D72DFC8C0700C914AC /* HomeVC */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		932450D72DFC8C0700C914AC /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				932450C62DFC7FD300C914AC /* HomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		932450D82DFC8C1800C914AC /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				932450D52DFC858600C914AC /* MainVC.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

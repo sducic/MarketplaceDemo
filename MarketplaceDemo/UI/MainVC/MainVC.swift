@@ -14,10 +14,10 @@ class MainVC: UIViewController {
 
         overrideUserInterfaceStyle = .light
         
-        setupNavigationTitle()
+        configureNavigationTitle()
     }
     
-    func setupNavigationTitle()
+    func configureNavigationTitle()
     {
         let headerTitle = UILabel()
         headerTitle.font = UIFont.boldSystemFont(ofSize: 18)

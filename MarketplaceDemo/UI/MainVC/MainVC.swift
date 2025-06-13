@@ -20,8 +20,8 @@ class MainVC: UIViewController {
     func configureNavigationTitle()
     {
         let headerTitle = UILabel()
-        headerTitle.font = UIFont.boldSystemFont(ofSize: 18)
-        headerTitle.text = "Marketplace"
+        headerTitle.text = Constants.navigationTitle
+        headerTitle.font = UIFont.boldSystemFont(ofSize: Constants.navigationTitleFontSize)
         headerTitle.textColor = UIColor.black
         navigationItem.titleView = headerTitle
     }

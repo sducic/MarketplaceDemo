@@ -16,6 +16,7 @@
 		932450D62DFC858600C914AC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D52DFC858600C914AC /* MainVC.swift */; };
 		932450DA2DFCD05900C914AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D92DFCD05900C914AC /* Constants.swift */; };
 		932450DD2DFCD27C00C914AC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932450DC2DFCD27C00C914AC /* Colors.xcassets */; };
+		932450E22DFCD43900C914AC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E12DFCD43900C914AC /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		932450D52DFC858600C914AC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		932450D92DFCD05900C914AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		932450DC2DFCD27C00C914AC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		932450E12DFCD43900C914AC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				932450D22DFC816F00C914AC /* UI */,
+				932450DE2DFCD40300C914AC /* Extensions */,
 				932450BF2DFC7FD300C914AC /* Assets.xcassets */,
 				932450DC2DFCD27C00C914AC /* Colors.xcassets */,
 				932450C02DFC7FD300C914AC /* Info.plist */,
@@ -98,6 +101,14 @@
 				932450D52DFC858600C914AC /* MainVC.swift */,
 			);
 			path = MainVC;
+			sourceTree = "<group>";
+		};
+		932450DE2DFCD40300C914AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				932450E12DFCD43900C914AC /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* HomeVC.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
+				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,11 +7,12 @@
 
 import UIKit
 
-class MainVC: UIViewController {
-
-    override func viewDidLoad() {
+class MainVC: UIViewController
+{
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        
         overrideUserInterfaceStyle = .light
         
         configureNavigationTitle()
@@ -19,12 +20,7 @@ class MainVC: UIViewController {
     
     func configureNavigationTitle()
     {
-        let headerTitle = UILabel()
-        headerTitle.text = Constants.navigationTitle
-        headerTitle.font = UIFont.boldSystemFont(ofSize: Constants.navigationTitleFontSize)
-        headerTitle.textColor = UIColor.black
-        navigationItem.titleView = headerTitle
+        let navigationTitle = NavigationTitleLabel()
+        navigationItem.titleView = navigationTitle
     }
-    
-
 }

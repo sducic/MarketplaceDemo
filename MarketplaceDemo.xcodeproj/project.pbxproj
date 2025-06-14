@@ -12,7 +12,7 @@
 		932450CB2DFC7FD300C914AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932450C42DFC7FD300C914AC /* Main.storyboard */; };
 		932450CC2DFC7FD300C914AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450BE2DFC7FD300C914AC /* AppDelegate.swift */; };
 		932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450C52DFC7FD300C914AC /* SceneDelegate.swift */; };
-		932450CE2DFC7FD300C914AC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450C62DFC7FD300C914AC /* HomeVC.swift */; };
+		932450CE2DFC7FD300C914AC /* PostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450C62DFC7FD300C914AC /* PostListVC.swift */; };
 		932450D62DFC858600C914AC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D52DFC858600C914AC /* MainVC.swift */; };
 		932450DA2DFCD05900C914AC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D92DFCD05900C914AC /* Constant.swift */; };
 		932450DD2DFCD27C00C914AC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932450DC2DFCD27C00C914AC /* Colors.xcassets */; };
@@ -20,6 +20,8 @@
 		932450E42DFCDA4C00C914AC /* NavigationTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */; };
 		932450E92DFDC2D000C914AC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E82DFDC2D000C914AC /* Post.swift */; };
 		932450EB2DFDC4B600C914AC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EA2DFDC4B600C914AC /* Comment.swift */; };
+		932450EE2DFDD2E100C914AC /* PostCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932450ED2DFDD2E100C914AC /* PostCVCell.xib */; };
+		932450EF2DFDD2E100C914AC /* PostCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EC2DFDD2E100C914AC /* PostCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +32,7 @@
 		932450C12DFC7FD300C914AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		932450C32DFC7FD300C914AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		932450C52DFC7FD300C914AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		932450C62DFC7FD300C914AC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		932450C62DFC7FD300C914AC /* PostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVC.swift; sourceTree = "<group>"; };
 		932450D52DFC858600C914AC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		932450D92DFCD05900C914AC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		932450DC2DFCD27C00C914AC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleLabel.swift; sourceTree = "<group>"; };
 		932450E82DFDC2D000C914AC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		932450EA2DFDC4B600C914AC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		932450EC2DFDD2E100C914AC /* PostCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCVCell.swift; sourceTree = "<group>"; };
+		932450ED2DFDD2E100C914AC /* PostCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,6 @@
 				932450DC2DFCD27C00C914AC /* Colors.xcassets */,
 				932450C02DFC7FD300C914AC /* Info.plist */,
 				932450C22DFC7FD300C914AC /* LaunchScreen.storyboard */,
-				932450C42DFC7FD300C914AC /* Main.storyboard */,
 				932450BE2DFC7FD300C914AC /* AppDelegate.swift */,
 				932450C52DFC7FD300C914AC /* SceneDelegate.swift */,
 				932450D92DFCD05900C914AC /* Constant.swift */,
@@ -90,6 +93,7 @@
 			children = (
 				932450D82DFC8C1800C914AC /* MainVC */,
 				932450D72DFC8C0700C914AC /* HomeVC */,
+				932450C42DFC7FD300C914AC /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -97,7 +101,9 @@
 		932450D72DFC8C0700C914AC /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				932450C62DFC7FD300C914AC /* HomeVC.swift */,
+				932450C62DFC7FD300C914AC /* PostListVC.swift */,
+				932450EC2DFDD2E100C914AC /* PostCVCell.swift */,
+				932450ED2DFDD2E100C914AC /* PostCVCell.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				932450DD2DFCD27C00C914AC /* Colors.xcassets in Resources */,
 				932450CA2DFC7FD300C914AC /* LaunchScreen.storyboard in Resources */,
 				932450CB2DFC7FD300C914AC /* Main.storyboard in Resources */,
+				932450EE2DFDD2E100C914AC /* PostCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,10 +212,11 @@
 			files = (
 				932450E42DFCDA4C00C914AC /* NavigationTitleLabel.swift in Sources */,
 				932450CC2DFC7FD300C914AC /* AppDelegate.swift in Sources */,
+				932450EF2DFDD2E100C914AC /* PostCVCell.swift in Sources */,
 				932450D62DFC858600C914AC /* MainVC.swift in Sources */,
 				932450E92DFDC2D000C914AC /* Post.swift in Sources */,
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
-				932450CE2DFC7FD300C914AC /* HomeVC.swift in Sources */,
+				932450CE2DFC7FD300C914AC /* PostListVC.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constant.swift in Sources */,
 				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
 				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,

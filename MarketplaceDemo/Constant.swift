@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Constant {
-    
+enum Constant
+{
     static let navigationTitle = "Marketplace"
     static let navigationTitleFontSize = 18.0
     

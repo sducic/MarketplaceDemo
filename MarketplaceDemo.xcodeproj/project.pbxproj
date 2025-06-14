@@ -19,6 +19,7 @@
 		932450E22DFCD43900C914AC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E12DFCD43900C914AC /* UIColor+.swift */; };
 		932450E42DFCDA4C00C914AC /* NavigationTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */; };
 		932450E92DFDC2D000C914AC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E82DFDC2D000C914AC /* Post.swift */; };
+		932450EB2DFDC4B600C914AC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EA2DFDC4B600C914AC /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		932450E12DFCD43900C914AC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleLabel.swift; sourceTree = "<group>"; };
 		932450E82DFDC2D000C914AC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		932450EA2DFDC4B600C914AC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				932450E82DFDC2D000C914AC /* Post.swift */,
+				932450EA2DFDC4B600C914AC /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* HomeVC.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constant.swift in Sources */,
+				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
 				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

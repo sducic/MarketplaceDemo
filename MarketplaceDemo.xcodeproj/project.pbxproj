@@ -14,7 +14,7 @@
 		932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450C52DFC7FD300C914AC /* SceneDelegate.swift */; };
 		932450CE2DFC7FD300C914AC /* PostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450C62DFC7FD300C914AC /* PostListVC.swift */; };
 		932450D62DFC858600C914AC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D52DFC858600C914AC /* MainVC.swift */; };
-		932450DA2DFCD05900C914AC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D92DFCD05900C914AC /* Constant.swift */; };
+		932450DA2DFCD05900C914AC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450D92DFCD05900C914AC /* Constants.swift */; };
 		932450DD2DFCD27C00C914AC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932450DC2DFCD27C00C914AC /* Colors.xcassets */; };
 		932450E22DFCD43900C914AC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E12DFCD43900C914AC /* UIColor+.swift */; };
 		932450E42DFCDA4C00C914AC /* NavigationTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */; };
@@ -23,6 +23,7 @@
 		932450EE2DFDD2E100C914AC /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932450ED2DFDD2E100C914AC /* PostCollectionViewCell.xib */; };
 		932450EF2DFDD2E100C914AC /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EC2DFDD2E100C914AC /* PostCollectionViewCell.swift */; };
 		932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450F02DFF17F500C914AC /* AddNewPostButton.swift */; };
+		932450F72DFF8F5900C914AC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450F62DFF8F5900C914AC /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,7 @@
 		932450C52DFC7FD300C914AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		932450C62DFC7FD300C914AC /* PostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVC.swift; sourceTree = "<group>"; };
 		932450D52DFC858600C914AC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		932450D92DFCD05900C914AC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		932450D92DFCD05900C914AC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		932450DC2DFCD27C00C914AC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		932450E12DFCD43900C914AC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleLabel.swift; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		932450EC2DFDD2E100C914AC /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		932450ED2DFDD2E100C914AC /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		932450F02DFF17F500C914AC /* AddNewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPostButton.swift; sourceTree = "<group>"; };
+		932450F62DFF8F5900C914AC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +79,15 @@
 			isa = PBXGroup;
 			children = (
 				932450E52DFDC29200C914AC /* Model */,
+				932450F52DFF8ECE00C914AC /* Manager */,
 				932450D22DFC816F00C914AC /* UI */,
-				932450DE2DFCD40300C914AC /* Extensions */,
+				932450F42DFF8EAD00C914AC /* Helpers */,
 				932450BF2DFC7FD300C914AC /* Assets.xcassets */,
 				932450DC2DFCD27C00C914AC /* Colors.xcassets */,
 				932450C02DFC7FD300C914AC /* Info.plist */,
 				932450C22DFC7FD300C914AC /* LaunchScreen.storyboard */,
 				932450BE2DFC7FD300C914AC /* AppDelegate.swift */,
 				932450C52DFC7FD300C914AC /* SceneDelegate.swift */,
-				932450D92DFCD05900C914AC /* Constant.swift */,
 			);
 			path = MarketplaceDemo;
 			sourceTree = "<group>";
@@ -135,6 +137,23 @@
 				932450EA2DFDC4B600C914AC /* Comment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		932450F42DFF8EAD00C914AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				932450D92DFCD05900C914AC /* Constants.swift */,
+				932450DE2DFCD40300C914AC /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		932450F52DFF8ECE00C914AC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				932450F62DFF8F5900C914AC /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932450F72DFF8F5900C914AC /* NetworkManager.swift in Sources */,
 				932450E42DFCDA4C00C914AC /* NavigationTitleLabel.swift in Sources */,
 				932450CC2DFC7FD300C914AC /* AppDelegate.swift in Sources */,
 				932450EF2DFDD2E100C914AC /* PostCollectionViewCell.swift in Sources */,
@@ -220,7 +240,7 @@
 				932450E92DFDC2D000C914AC /* Post.swift in Sources */,
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* PostListVC.swift in Sources */,
-				932450DA2DFCD05900C914AC /* Constant.swift in Sources */,
+				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
 				932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */,
 				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
 				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,

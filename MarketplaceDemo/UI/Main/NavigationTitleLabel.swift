@@ -24,8 +24,8 @@ class NavigationTitleLabel: UILabel
     
     private func setup()
     {
-        self.text = Constant.navigationTitle
-        self.font = UIFont.boldSystemFont(ofSize: Constant.navigationTitleFontSize)
+        self.text = Constants.navigationTitle
+        self.font = UIFont.boldSystemFont(ofSize: Constants.navigationTitleFontSize)
         self.textColor = UIColor.navigationTitleTextColor
     }
 }

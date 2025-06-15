@@ -21,15 +21,15 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="by7-7m-tqO">
                         <rect key="frame" x="0.0" y="0.0" width="277" height="135"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-ZN-nDD">
-                                <rect key="frame" x="0.0" y="0.0" width="277" height="105"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-ZN-nDD">
+                                <rect key="frame" x="0.0" y="0.0" width="277" height="85"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-vg-YfD">
-                                <rect key="frame" x="0.0" y="105" width="277" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-vg-YfD">
+                                <rect key="frame" x="0.0" y="85" width="277" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,7 +40,7 @@
                             <constraint firstAttribute="trailing" secondItem="Ie6-ZN-nDD" secondAttribute="trailing" id="L4w-23-tjS"/>
                             <constraint firstItem="q2p-vg-YfD" firstAttribute="leading" secondItem="by7-7m-tqO" secondAttribute="leading" id="bdt-Ez-GDI"/>
                             <constraint firstItem="Ie6-ZN-nDD" firstAttribute="top" secondItem="by7-7m-tqO" secondAttribute="top" id="cXa-rj-suF"/>
-                            <constraint firstAttribute="bottom" secondItem="Ie6-ZN-nDD" secondAttribute="bottom" constant="30" id="eEK-BT-i1k"/>
+                            <constraint firstAttribute="bottom" secondItem="Ie6-ZN-nDD" secondAttribute="bottom" constant="50" id="eEK-BT-i1k"/>
                             <constraint firstAttribute="bottom" secondItem="q2p-vg-YfD" secondAttribute="bottom" id="fZg-AI-bGo"/>
                             <constraint firstAttribute="trailing" secondItem="q2p-vg-YfD" secondAttribute="trailing" id="u8W-p4-Vhg"/>
                             <constraint firstItem="Ie6-ZN-nDD" firstAttribute="leading" secondItem="by7-7m-tqO" secondAttribute="leading" id="wMK-e1-UTW"/>

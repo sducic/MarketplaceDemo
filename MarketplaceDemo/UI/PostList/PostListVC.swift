@@ -23,8 +23,6 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
     
     override func viewDidLoad()
     {
-        fetchData()
-        
         super.viewDidLoad()
         
         postCollectionView.delegate = self
@@ -35,7 +33,15 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
   
         setupAddNewPostButton()
         
-        
+        Task {
+                do {
+                    let posts = try await NetworkManager.shared.fetchPost()
+                    self.posts = posts
+                    self.postCollectionView.reloadData()
+                } catch {
+                    print("Error: \(error)")
+                }
+            }
     }
     
     
@@ -52,19 +58,14 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         ])
     }
     
-    func configureAddNewPostButtonConstraints()
-    {
-        
-    }
-    
-    func fetchData()
-    {
-        let post1 = Post(userId: 1, id: 101, title: "First Post", body: "Test 1")
-        let post2 = Post(userId: 2, id: 102, title: "Second Post", body: "Test 2")
-        let post3 = Post(userId: 3, id: 103, title: "Third Post", body: "Test 3")
-
-        posts = [post1, post2, post3]
-    }
+//    func fetchData()
+//    {
+//        let post1 = Post(userId: 1, id: 101, title: "First Post", body: "Test 1")
+//        let post2 = Post(userId: 2, id: 102, title: "Second Post", body: "Test 2")
+//        let post3 = Post(userId: 3, id: 103, title: "Third Post", body: "Test 3")
+//
+//        posts = [post1, post2, post3]
+//    }
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -81,9 +82,7 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-            return CGSize(width:collectionView.frame.width, height: 50)
+        return CGSize(width:collectionView.frame.width, height: Constants.postCellHeightSize)
     }
-
     
 }
-

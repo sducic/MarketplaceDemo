@@ -1,0 +1,50 @@
+//
+//  NetworkManager.swift
+//  MarketplaceDemo
+//
+//  Created by Stefan Ducic on 16. 6. 2025..
+//
+
+import Foundation
+
+
+class NetworkManager
+{
+    static let shared = NetworkManager()
+        
+    private init() {}
+    
+    func fetchPost() async throws -> [Post]
+    {
+        guard let url = URL(string: Constants.baseURL) else {
+            throw AppError.invalidURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse else  {
+                throw AppError.invalidResponse(statusCode: -1)
+        }
+
+        guard httpResponse.statusCode == 200 else   {
+                throw AppError.invalidResponse(statusCode: httpResponse.statusCode)
+        }
+        
+        do {
+            let decoder = JSONDecoder ()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            return try decoder.decode([Post].self, from: data)
+        } catch {
+            throw AppError.invalidDecoding
+        }
+    }
+    
+}
+
+enum AppError: Error
+{
+    case invalidURL
+    case invalidResponse(statusCode: Int)
+    case invalidDecoding
+    case unknown
+}

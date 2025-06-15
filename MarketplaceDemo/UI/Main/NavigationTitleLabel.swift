@@ -13,16 +13,16 @@ class NavigationTitleLabel: UILabel
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        setupLabel()
+        setup()
     }
     
     required init?(coder: NSCoder)
     {
         super.init(coder: coder)
-        setupLabel()
+        setup()
     }
     
-    private func setupLabel()
+    private func setup()
     {
         self.text = Constant.navigationTitle
         self.font = UIFont.boldSystemFont(ofSize: Constant.navigationTitleFontSize)

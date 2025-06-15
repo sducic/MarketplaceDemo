@@ -22,6 +22,7 @@
 		932450EB2DFDC4B600C914AC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EA2DFDC4B600C914AC /* Comment.swift */; };
 		932450EE2DFDD2E100C914AC /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 932450ED2DFDD2E100C914AC /* PostCollectionViewCell.xib */; };
 		932450EF2DFDD2E100C914AC /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450EC2DFDD2E100C914AC /* PostCollectionViewCell.swift */; };
+		932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450F02DFF17F500C914AC /* AddNewPostButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		932450EA2DFDC4B600C914AC /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		932450EC2DFDD2E100C914AC /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		932450ED2DFDD2E100C914AC /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		932450F02DFF17F500C914AC /* AddNewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPostButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 		932450D22DFC816F00C914AC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				932450D82DFC8C1800C914AC /* MainVC */,
+				932450D82DFC8C1800C914AC /* Main */,
 				932450D72DFC8C0700C914AC /* PostList */,
 				932450C42DFC7FD300C914AC /* Main.storyboard */,
 			);
@@ -104,17 +106,18 @@
 				932450C62DFC7FD300C914AC /* PostListVC.swift */,
 				932450EC2DFDD2E100C914AC /* PostCollectionViewCell.swift */,
 				932450ED2DFDD2E100C914AC /* PostCollectionViewCell.xib */,
+				932450F02DFF17F500C914AC /* AddNewPostButton.swift */,
 			);
 			path = PostList;
 			sourceTree = "<group>";
 		};
-		932450D82DFC8C1800C914AC /* MainVC */ = {
+		932450D82DFC8C1800C914AC /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				932450D52DFC858600C914AC /* MainVC.swift */,
 				932450E32DFCDA4C00C914AC /* NavigationTitleLabel.swift */,
 			);
-			path = MainVC;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		932450DE2DFCD40300C914AC /* Extensions */ = {
@@ -218,6 +221,7 @@
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* PostListVC.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constant.swift in Sources */,
+				932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */,
 				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
 				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,
 			);

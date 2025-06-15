@@ -9,7 +9,16 @@ import UIKit
 
 class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    @IBOutlet weak var postsCollectionView: UICollectionView!
+    @IBOutlet weak var postCollectionView: UICollectionView!
+    @IBOutlet weak var postFooterView: UIView!
+    
+    //let addNewPostButton = AddNewPostButton()
+    private lazy var addNewPostButton: AddNewPostButton = {
+            let button = AddNewPostButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            //button.addTarget(self, action: #selector(addNewPostTapped), for: .touchUpInside)
+            return button
+        }()
     var posts = [Post]()
     
     override func viewDidLoad()
@@ -18,12 +27,33 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         
         super.viewDidLoad()
         
-        postsCollectionView.delegate = self
-        postsCollectionView.dataSource = self
+        postCollectionView.delegate = self
+        postCollectionView.dataSource = self
 
         let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
-        postsCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
+        postCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
   
+        setupAddNewPostButton()
+        
+        
+    }
+    
+    
+    func setupAddNewPostButton()
+    {
+        addNewPostButton.translatesAutoresizingMaskIntoConstraints = false
+        postFooterView.addSubview(addNewPostButton)
+        
+        NSLayoutConstraint.activate([
+            addNewPostButton.centerXAnchor.constraint(equalTo: postFooterView.centerXAnchor),
+            addNewPostButton.centerYAnchor.constraint(equalTo: postFooterView.centerYAnchor),
+            addNewPostButton.widthAnchor.constraint(equalToConstant: 50),
+            addNewPostButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    func configureAddNewPostButtonConstraints()
+    {
         
     }
     

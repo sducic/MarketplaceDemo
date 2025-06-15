@@ -21,8 +21,8 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         postsCollectionView.delegate = self
         postsCollectionView.dataSource = self
 
-        let nib = UINib(nibName: "PostCVCell", bundle: nil)
-        postsCollectionView.register(nib, forCellWithReuseIdentifier: "PostCVCell")
+        let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
+        postsCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
   
         
     }
@@ -34,19 +34,18 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         let post3 = Post(userId: 3, id: 103, title: "Third Post", body: "Test 3")
 
         posts = [post1, post2, post3]
-        
     }
     
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 3
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCVCell", for: indexPath) as! PostCVCell
-            
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! PostCollectionViewCell
+        cell.set(post: posts[indexPath.item])
         return cell
     }
     

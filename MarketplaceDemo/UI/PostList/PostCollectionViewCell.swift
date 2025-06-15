@@ -7,14 +7,21 @@
 
 import UIKit
 
-class PostCVCell: UICollectionViewCell
+class PostCollectionViewCell: UICollectionViewCell
 {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
                 
+    }
+    
+    func set(post: Post)
+    {
+        titleLabel.text = post.title
+        bodyLabel.text = post.body
     }
 
 }

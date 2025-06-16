@@ -19,7 +19,7 @@ class PostListViewController: MainViewController
     private lazy var addNewPostButton: AddNewPostButton = {
             let button = AddNewPostButton()
             button.translatesAutoresizingMaskIntoConstraints = false
-            //button.addTarget(self, action: #selector(addNewPostTapped), for: .touchUpInside)
+            button.addTarget(self, action: #selector(addNewPostTapped), for: .touchUpInside)
             return button
         }()
     
@@ -84,6 +84,14 @@ class PostListViewController: MainViewController
                 }
             }
     }
+    
+    @objc private func addNewPostTapped()
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let postCreateVC = storyboard.instantiateViewController(withIdentifier: "PostCreateViewController") as! PostCreateViewController
+        navigationController?.pushViewController(postCreateVC, animated: true)
+    }
+
     
     //TODO: update CollectionView with the new data instead of reload?
     

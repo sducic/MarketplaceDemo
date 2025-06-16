@@ -27,6 +27,7 @@
 		932451072E003CDF00C914AC /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932451062E003CDF00C914AC /* PostDetailViewController.swift */; };
 		9361973F2E008DF100244DD9 /* PostDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */; };
 		936197412E008F3800244DD9 /* PostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */; };
+		936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197442E00999000244DD9 /* PostCreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		932451062E003CDF00C914AC /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		936197442E00999000244DD9 /* PostCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +90,7 @@
 				932450F52DFF8ECE00C914AC /* Manager */,
 				932450D22DFC816F00C914AC /* UI */,
 				932450F42DFF8EAD00C914AC /* Helpers */,
-				932450BF2DFC7FD300C914AC /* Assets.xcassets */,
-				932450DC2DFCD27C00C914AC /* Colors.xcassets */,
+				936197422E0097E100244DD9 /* Assets */,
 				932450C02DFC7FD300C914AC /* Info.plist */,
 				932450C22DFC7FD300C914AC /* LaunchScreen.storyboard */,
 				932450BE2DFC7FD300C914AC /* AppDelegate.swift */,
@@ -104,6 +105,7 @@
 				932450D82DFC8C1800C914AC /* Main */,
 				932450D72DFC8C0700C914AC /* PostList */,
 				932451052E003C8A00C914AC /* PostDetail */,
+				936197432E0098EB00244DD9 /* PostCreate */,
 				932450C42DFC7FD300C914AC /* Main.storyboard */,
 			);
 			path = UI;
@@ -171,6 +173,23 @@
 				9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */,
 			);
 			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		936197422E0097E100244DD9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				932450BF2DFC7FD300C914AC /* Assets.xcassets */,
+				932450DC2DFCD27C00C914AC /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		936197432E0098EB00244DD9 /* PostCreate */ = {
+			isa = PBXGroup;
+			children = (
+				936197442E00999000244DD9 /* PostCreateViewController.swift */,
+			);
+			path = PostCreate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* PostListViewController.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
+				936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */,
 				932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */,
 				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
 				936197412E008F3800244DD9 /* PostDetailCollectionViewCell.swift in Sources */,

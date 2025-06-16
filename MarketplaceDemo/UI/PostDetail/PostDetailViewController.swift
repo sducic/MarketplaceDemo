@@ -94,7 +94,7 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        //refactor
+        //TODO: refactor
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostDetailCollectionViewCell", for: indexPath) as! PostDetailCollectionViewCell
         cell.set(comment: comments[indexPath.item])
         return cell
@@ -103,7 +103,7 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
        
-        //refactor
+        //TODO: refactor
         return CGSize(width:collectionView.frame.width * Constants.postCellWidthRatio, height: 80)
     }
     

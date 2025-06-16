@@ -70,6 +70,21 @@
             </objects>
             <point key="canvasLocation" x="243.51145038167937" y="-6.3380281690140849"/>
         </scene>
+        <!--Post Create View Controller-->
+        <scene sceneID="OvT-61-bmD">
+            <objects>
+                <viewController storyboardIdentifier="PostCreateViewController" id="thl-7I-1N9" customClass="PostCreateViewController" customModule="MarketplaceDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ge-Zk-hpH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ah9-bu-3xE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZi-8C-45r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="438"/>
+        </scene>
         <!--Post Detail View Controller-->
         <scene sceneID="V9b-wa-Yg1">
             <objects>

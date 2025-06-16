@@ -10,6 +10,8 @@ import UIKit
 class PostListViewController: MainViewController
 {
     var posts = [Post]()
+    var page = 1
+    let limit = 20
     
     @IBOutlet weak var postCollectionView: UICollectionView!
     @IBOutlet weak var postFooterView: UIView!
@@ -28,7 +30,7 @@ class PostListViewController: MainViewController
         setupPostCollectionView()
         setupAddNewPostButton()
         
-        fetchPostData()
+        fetchPostData(page: page, limit: limit)
     }
     
     
@@ -59,19 +61,27 @@ class PostListViewController: MainViewController
         ])
     }
     
-    func fetchPostData()
+    func fetchPostData(page: Int, limit: Int)
     {
         Task {
                 do {
-                    let posts = try await NetworkManager.shared.fetchPost()
-                    self.posts = posts
-                    //TODO: main thread reloadData?
-                    self.postCollectionView.reloadData()
+                    print("CALL")
+                    let newPosts = try await NetworkManager.shared.fetchPost(page: page, limit: limit)
+                    guard !newPosts.isEmpty else { return }
+                    
+                    self.posts.append(contentsOf: newPosts)
+                    self.page += 1
+                    
+                    DispatchQueue.main.async    {
+                        self.postCollectionView.reloadData()
+                    }
                 } catch {
                     print("Error: \(error)")
                 }
             }
     }
+    
+    //TODO: update CollectionView with the new data instead of reload?
     
 }
 
@@ -100,5 +110,14 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         return CGSize(width:collectionView.frame.width, height: Constants.postCellHeightSize)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+    {
+        if indexPath.item == posts.count - 1
+        {
+            print("end")
+            fetchPostData(page: page, limit: limit)
+        }
     }
 }

@@ -14,9 +14,12 @@ class NetworkManager
         
     private init() {}
     
-    func fetchPost() async throws -> [Post]
+    //TODO: refactor
+    func fetchPost(page: Int, limit: Int) async throws -> [Post]
     {
-        guard let url = URL(string: Constants.baseURL) else {
+        let urlString = "https://jsonplaceholder.typicode.com/posts?_page=\(page)&_limit=\(limit)"
+        
+        guard let url = URL(string: urlString) else {
             throw AppError.invalidURL
         }
         

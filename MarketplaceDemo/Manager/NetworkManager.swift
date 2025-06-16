@@ -14,7 +14,7 @@ class NetworkManager
         
     private init() {}
     
-    //TODO: refactor
+    //TODO: refactor NetworkManager
     func fetchPost(page: Int, limit: Int) async throws -> [Post]
     {
         let urlString = "https://jsonplaceholder.typicode.com/posts?_page=\(page)&_limit=\(limit)"
@@ -87,6 +87,7 @@ class NetworkManager
     
 }
 
+//TODO: move to model?
 enum AppError: Error
 {
     case invalidURL

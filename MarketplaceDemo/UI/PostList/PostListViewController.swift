@@ -116,6 +116,7 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "PostDetailVC") as! PostDetailViewController
+        viewController.postId = posts[indexPath.item].id
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

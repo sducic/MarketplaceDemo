@@ -59,9 +59,9 @@ class NetworkManager
         return image
     }
     
-    func fetchComment() async throws -> [Comment]
+    func fetchComment(postId: Int) async throws -> [Comment]
     {
-        let urlString = "https://jsonplaceholder.typicode.com/comments?postId=1"
+        let urlString = "https://jsonplaceholder.typicode.com/comments?postId=\(postId)"
         
         guard let url = URL(string: urlString) else {
             throw AppError.invalidURL

@@ -9,6 +9,7 @@ import UIKit
 
 class PostDetailViewController: MainViewController
 {
+    var postId: Int?
     var comments = [Comment]()
     
     @IBOutlet weak var postImageView: UIImageView!
@@ -31,7 +32,8 @@ class PostDetailViewController: MainViewController
     func fetchData()
     {
         loadImage()
-        loadComment()
+        //TODO: handle error
+        loadComment(postId: postId ?? 0)
     }
     
     func loadImage()
@@ -49,11 +51,11 @@ class PostDetailViewController: MainViewController
             }
     }
     
-    func loadComment()
+    func loadComment(postId: Int)
     {
         Task {
                 do {
-                    let comments = try await NetworkManager.shared.fetchComment()
+                    let comments = try await NetworkManager.shared.fetchComment(postId: postId)
                     guard !comments.isEmpty else { return }
                     
                     self.comments = comments

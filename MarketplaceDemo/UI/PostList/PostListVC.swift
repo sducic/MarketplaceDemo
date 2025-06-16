@@ -28,7 +28,7 @@ class PostListVC: MainVC
         setupPostCollectionView()
         setupAddNewPostButton()
         
-        fetchData()
+        fetchPostData()
     }
     
     
@@ -36,11 +36,15 @@ class PostListVC: MainVC
     {
         postCollectionView.delegate = self
         postCollectionView.dataSource = self
-
-        let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
-        postCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
+        
+        registerPostCell()
     }
     
+    func registerPostCell()
+    {
+        let nib = UINib(nibName: Constants.postCVCellIdentifier, bundle: nil)
+        postCollectionView.register(nib, forCellWithReuseIdentifier: Constants.postCVCellIdentifier)
+    }
     
     func setupAddNewPostButton()
     {
@@ -50,17 +54,18 @@ class PostListVC: MainVC
         NSLayoutConstraint.activate([
             addNewPostButton.centerXAnchor.constraint(equalTo: postFooterView.centerXAnchor),
             addNewPostButton.centerYAnchor.constraint(equalTo: postFooterView.centerYAnchor),
-            addNewPostButton.widthAnchor.constraint(equalToConstant: 50),
-            addNewPostButton.heightAnchor.constraint(equalToConstant: 50)
+            addNewPostButton.widthAnchor.constraint(equalToConstant: 45),
+            addNewPostButton.heightAnchor.constraint(equalToConstant: 45)
         ])
     }
     
-    func fetchData()
+    func fetchPostData()
     {
         Task {
                 do {
                     let posts = try await NetworkManager.shared.fetchPost()
                     self.posts = posts
+                    //TODO: main thread reloadData?
                     self.postCollectionView.reloadData()
                 } catch {
                     print("Error: \(error)")
@@ -80,7 +85,7 @@ extension PostListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! PostCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.postCVCellIdentifier, for: indexPath) as! PostCollectionViewCell
         cell.set(post: posts[indexPath.item])
         return cell
     }

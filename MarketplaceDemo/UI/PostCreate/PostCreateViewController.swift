@@ -9,6 +9,8 @@ import UIKit
 
 class PostCreateViewController: MainViewController
 {
+    var newPost = NewPost()
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var aboutLabel: UILabel!
@@ -18,15 +20,16 @@ class PostCreateViewController: MainViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         setupUI()
     }
     
     override func setupUI()
     {
         super.setupUI()
-        
+        titleTextField.delegate = self
+        aboutTextView.delegate = self
         setupCreateNewPostButton()
+        addTapGestureToDismissKeyboard()
     }
     
     func setupCreateNewPostButton()
@@ -43,5 +46,42 @@ class PostCreateViewController: MainViewController
     {
         print("test btn")
     }
+    
+    func addTapGestureToDismissKeyboard()
+    {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapToDismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTapToDismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 
 }
+
+extension PostCreateViewController: UITextFieldDelegate, UITextViewDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        if textField == titleTextField
+        {
+            newPost.title = textField.text ?? ""
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if textView == aboutTextView
+        {
+            newPost.body = textView.text ?? ""
+        }
+    }
+}
+

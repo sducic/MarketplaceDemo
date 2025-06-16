@@ -26,7 +26,6 @@ class PostListViewController: MainViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-  
         setupUI()
         fetchPostData(page: page, limit: limit)
     }

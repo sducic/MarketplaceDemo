@@ -28,6 +28,7 @@
 		9361973F2E008DF100244DD9 /* PostDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */; };
 		936197412E008F3800244DD9 /* PostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */; };
 		936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197442E00999000244DD9 /* PostCreateViewController.swift */; };
+		936197472E00C43B00244DD9 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197462E00C43B00244DD9 /* NewPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		936197442E00999000244DD9 /* PostCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewController.swift; sourceTree = "<group>"; };
+		936197462E00C43B00244DD9 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				932450E82DFDC2D000C914AC /* Post.swift */,
+				936197462E00C43B00244DD9 /* NewPost.swift */,
 				932450EA2DFDC4B600C914AC /* Comment.swift */,
 			);
 			path = Model;
@@ -277,6 +280,7 @@
 				932450D62DFC858600C914AC /* MainViewController.swift in Sources */,
 				932450E92DFDC2D000C914AC /* Post.swift in Sources */,
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
+				936197472E00C43B00244DD9 /* NewPost.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* PostListViewController.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
 				936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */,

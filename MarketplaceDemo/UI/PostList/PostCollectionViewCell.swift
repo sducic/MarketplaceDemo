@@ -22,5 +22,4 @@ class PostCollectionViewCell: UICollectionViewCell
         titleLabel.text = post.title
         bodyLabel.text = post.body
     }
-
 }

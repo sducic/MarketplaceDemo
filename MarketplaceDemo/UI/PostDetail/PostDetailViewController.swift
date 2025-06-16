@@ -18,7 +18,6 @@ class PostDetailViewController: MainViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         setupUI()
         fetchData()
     }

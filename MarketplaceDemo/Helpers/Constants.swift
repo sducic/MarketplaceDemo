@@ -9,6 +9,9 @@ import Foundation
 
 enum Constants
 {
+    //userId
+    static let userId = 1
+    
     //navigationControllerTitle
     static let navigationTitle = "Marketplace"
     static let navigationTitleFontSize = 18.0

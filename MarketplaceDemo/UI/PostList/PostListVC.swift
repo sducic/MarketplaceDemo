@@ -7,41 +7,38 @@
 
 import UIKit
 
-class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+class PostListVC: MainVC
 {
+    var posts = [Post]()
+    
     @IBOutlet weak var postCollectionView: UICollectionView!
     @IBOutlet weak var postFooterView: UIView!
     
-    //let addNewPostButton = AddNewPostButton()
     private lazy var addNewPostButton: AddNewPostButton = {
             let button = AddNewPostButton()
             button.translatesAutoresizingMaskIntoConstraints = false
             //button.addTarget(self, action: #selector(addNewPostTapped), for: .touchUpInside)
             return button
         }()
-    var posts = [Post]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+  
+        setupPostCollectionView()
+        setupAddNewPostButton()
         
+        fetchData()
+    }
+    
+    
+    func setupPostCollectionView()
+    {
         postCollectionView.delegate = self
         postCollectionView.dataSource = self
 
         let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
         postCollectionView.register(nib, forCellWithReuseIdentifier: "PostCollectionViewCell")
-  
-        setupAddNewPostButton()
-        
-        Task {
-                do {
-                    let posts = try await NetworkManager.shared.fetchPost()
-                    self.posts = posts
-                    self.postCollectionView.reloadData()
-                } catch {
-                    print("Error: \(error)")
-                }
-            }
     }
     
     
@@ -58,16 +55,24 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
         ])
     }
     
-//    func fetchData()
-//    {
-//        let post1 = Post(userId: 1, id: 101, title: "First Post", body: "Test 1")
-//        let post2 = Post(userId: 2, id: 102, title: "Second Post", body: "Test 2")
-//        let post3 = Post(userId: 3, id: 103, title: "Third Post", body: "Test 3")
-//
-//        posts = [post1, post2, post3]
-//    }
+    func fetchData()
+    {
+        Task {
+                do {
+                    let posts = try await NetworkManager.shared.fetchPost()
+                    self.posts = posts
+                    self.postCollectionView.reloadData()
+                } catch {
+                    print("Error: \(error)")
+                }
+            }
+    }
     
+}
 
+
+extension PostListVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return posts.count
@@ -84,5 +89,4 @@ class PostListVC: MainVC, UICollectionViewDelegate, UICollectionViewDataSource, 
     {
         return CGSize(width:collectionView.frame.width, height: Constants.postCellHeightSize)
     }
-    
 }

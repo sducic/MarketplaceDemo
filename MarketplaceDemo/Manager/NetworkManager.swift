@@ -32,7 +32,6 @@ class NetworkManager
         
         do {
             let decoder = JSONDecoder ()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             return try decoder.decode([Post].self, from: data)
         } catch {
             throw AppError.invalidDecoding

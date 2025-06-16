@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class NetworkManager
 {
@@ -41,6 +41,24 @@ class NetworkManager
         }
     }
     
+    
+    func fetchImage() async throws -> UIImage
+    {
+        let urlString = "https://picsum.photos/300/200"
+        
+        guard let url = URL(string: urlString) else {
+            throw AppError.invalidURL
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        guard let image = UIImage(data: data) else {
+            throw AppError.invalidImage
+        }
+        
+        return image
+    }
+    
 }
 
 enum AppError: Error
@@ -48,5 +66,6 @@ enum AppError: Error
     case invalidURL
     case invalidResponse(statusCode: Int)
     case invalidDecoding
+    case invalidImage
     case unknown
 }

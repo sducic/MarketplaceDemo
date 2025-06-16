@@ -94,14 +94,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Hk-7X-BJ4">
-                                <rect key="frame" x="46.666666666666657" y="168" width="300" height="200"/>
+                                <rect key="frame" x="46.666666666666657" y="138" width="300" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="cTX-Tc-tjv"/>
                                     <constraint firstAttribute="height" constant="200" id="xEN-9L-0xH"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-s0-8HF">
-                                <rect key="frame" x="0.0" y="388" width="393" height="396"/>
+                                <rect key="frame" x="0.0" y="358" width="393" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YV2-nZ-dCP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -115,7 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="lwl-RB-cdr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Hk-7X-BJ4" firstAttribute="top" secondItem="lwl-RB-cdr" secondAttribute="top" constant="50" id="7bw-xl-fQ5"/>
+                            <constraint firstItem="2Hk-7X-BJ4" firstAttribute="top" secondItem="lwl-RB-cdr" secondAttribute="top" constant="20" id="7bw-xl-fQ5"/>
                             <constraint firstItem="lwl-RB-cdr" firstAttribute="bottom" secondItem="d7C-s0-8HF" secondAttribute="bottom" id="7oA-C8-h6Y"/>
                             <constraint firstItem="2Hk-7X-BJ4" firstAttribute="centerX" secondItem="VVz-nb-Wwk" secondAttribute="centerX" id="CsS-hX-lrf"/>
                             <constraint firstItem="lwl-RB-cdr" firstAttribute="trailing" secondItem="d7C-s0-8HF" secondAttribute="trailing" id="R22-77-bu7"/>

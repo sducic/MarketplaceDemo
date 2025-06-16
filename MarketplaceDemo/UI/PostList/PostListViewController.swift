@@ -93,8 +93,8 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PostDetailVC") as! PostDetailVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PostDetailVC") as! PostDetailViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

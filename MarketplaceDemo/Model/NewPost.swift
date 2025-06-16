@@ -15,8 +15,8 @@ struct NewPost: Codable
     
     init(userId: Int = Constants.userId, title: String = "", body: String = "")
     {
-            self.userId = userId
-            self.title = title
-            self.body = body
+        self.userId = userId
+        self.title = title
+        self.body = body
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NavigationTitleLabel: UILabel
+class NavigationControllerTitleLabel: UILabel
 {
     override init(frame: CGRect)
     {

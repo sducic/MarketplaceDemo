@@ -81,9 +81,6 @@ class PostDetailViewController: MainViewController
         let nib = UINib(nibName: "PostDetailCollectionViewCell", bundle: nil)
         postDetailCollectionView.register(nib, forCellWithReuseIdentifier: "PostDetailCollectionViewCell")
     }
-    
-    
-
 }
 
 extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout

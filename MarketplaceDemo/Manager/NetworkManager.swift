@@ -85,14 +85,35 @@ class NetworkManager
         }
     }
     
+    
+    func createNewPostRequest(post: NewPost) async throws -> NewPost
+    {
+        let urlString = "https://jsonplaceholder.typicode.com/posts"
+        guard let url = URL(string: urlString) else {
+            throw AppError.invalidURL
+        }
+            
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+        let jsonData = try JSONEncoder().encode(post)
+        request.httpBody = jsonData
+            
+        let (data, response) = try await URLSession.shared.data(for: request)
+            
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+            throw AppError.invalidStatusCode(statusCode: -1)
+        }
+            
+        guard (200...299).contains(statusCode) else {
+            throw AppError.invalidStatusCode(statusCode: statusCode)
+        }
+            
+        let decodedResponse = try JSONDecoder().decode(NewPost.self, from: data)
+            
+        return decodedResponse
+    }
+    
 }
 
-//TODO: move to model?
-enum AppError: Error
-{
-    case invalidURL
-    case invalidResponse(statusCode: Int)
-    case invalidDecoding
-    case invalidImage
-    case unknown
-}

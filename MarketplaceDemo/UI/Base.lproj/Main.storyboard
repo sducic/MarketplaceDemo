@@ -182,8 +182,8 @@
                                 <rect key="frame" x="96.666666666666686" y="684" width="200" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="AT8-lF-PFr"/>
-                                    <constraint firstAttribute="width" constant="200" id="ej4-WF-5SE"/>
+                                    <constraint firstAttribute="height" constant="50" id="0bV-9e-OkE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ej4-WF-5SE"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted"/>

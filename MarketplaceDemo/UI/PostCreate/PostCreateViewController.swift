@@ -44,7 +44,16 @@ class PostCreateViewController: MainViewController
     
     @objc func createNewPostButtonTapped()
     {
-        print("test btn")
+        Task {
+                do
+                {
+                    print(newPost)
+                    let newPost = try await NetworkManager.shared.createNewPostRequest(post: newPost)
+                    print("Created post with id: \(newPost.title)")
+                } catch {
+                    print("Failed to create post: \(error)")
+                }
+            }
     }
     
     func addTapGestureToDismissKeyboard()
@@ -57,7 +66,6 @@ class PostCreateViewController: MainViewController
     {
         view.endEditing(true)
     }
-
 }
 
 extension PostCreateViewController: UITextFieldDelegate, UITextViewDelegate

@@ -18,11 +18,11 @@ class MainViewController: UIViewController
     func setupUI()
     {
         overrideUserInterfaceStyle = .light
-        configureNavigationTitle()
+        configureNavigationControllerTitle()
     }
     
-    func configureNavigationTitle()
+    func configureNavigationControllerTitle()
     {
-        navigationItem.titleView = NavigationTitleLabel()
+        navigationItem.titleView = NavigationControllerTitleLabel()
     }
 }

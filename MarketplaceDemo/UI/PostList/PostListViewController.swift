@@ -27,12 +27,16 @@ class PostListViewController: MainViewController
     {
         super.viewDidLoad()
   
-        setupPostCollectionView()
-        setupAddNewPostButton()
-        
+        setupUI()
         fetchPostData(page: page, limit: limit)
     }
     
+    override func setupUI()
+    {
+        super.setupUI()
+        setupPostCollectionView()
+        setupAddNewPostButton()
+    }
     
     func setupPostCollectionView()
     {
@@ -109,7 +113,7 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:collectionView.frame.width, height: Constants.postCellHeightSize)
+        return CGSize(width:collectionView.frame.width * Constants.postCellWidthRatio, height: Constants.postCellHeightSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)

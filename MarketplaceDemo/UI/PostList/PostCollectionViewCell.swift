@@ -15,7 +15,6 @@ class PostCollectionViewCell: UICollectionViewCell
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
     }
     
     func set(post: Post)

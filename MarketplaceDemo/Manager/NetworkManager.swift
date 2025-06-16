@@ -41,7 +41,7 @@ class NetworkManager
         }
     }
     
-    
+    //TODO: handle errors
     func fetchImage() async throws -> UIImage
     {
         let urlString = "https://picsum.photos/300/200"
@@ -57,6 +57,32 @@ class NetworkManager
         }
         
         return image
+    }
+    
+    func fetchComment() async throws -> [Comment]
+    {
+        let urlString = "https://jsonplaceholder.typicode.com/comments?postId=1"
+        
+        guard let url = URL(string: urlString) else {
+            throw AppError.invalidURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse else  {
+                throw AppError.invalidResponse(statusCode: -1)
+        }
+
+        guard httpResponse.statusCode == 200 else   {
+                throw AppError.invalidResponse(statusCode: httpResponse.statusCode)
+        }
+        
+        do {
+            let decoder = JSONDecoder ()
+            return try decoder.decode([Comment].self, from: data)
+        } catch {
+            throw AppError.invalidDecoding
+        }
     }
     
 }

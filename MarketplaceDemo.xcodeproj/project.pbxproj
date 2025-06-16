@@ -25,6 +25,8 @@
 		932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450F02DFF17F500C914AC /* AddNewPostButton.swift */; };
 		932450F72DFF8F5900C914AC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932450F62DFF8F5900C914AC /* NetworkManager.swift */; };
 		932451072E003CDF00C914AC /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932451062E003CDF00C914AC /* PostDetailViewController.swift */; };
+		9361973F2E008DF100244DD9 /* PostDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */; };
+		936197412E008F3800244DD9 /* PostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		932450F02DFF17F500C914AC /* AddNewPostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPostButton.swift; sourceTree = "<group>"; };
 		932450F62DFF8F5900C914AC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		932451062E003CDF00C914AC /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				932451062E003CDF00C914AC /* PostDetailViewController.swift */,
+				936197402E008F3800244DD9 /* PostDetailCollectionViewCell.swift */,
+				9361973E2E008DF100244DD9 /* PostDetailCollectionViewCell.xib */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 			files = (
 				932450C82DFC7FD300C914AC /* Assets.xcassets in Resources */,
 				932450DD2DFCD27C00C914AC /* Colors.xcassets in Resources */,
+				9361973F2E008DF100244DD9 /* PostDetailCollectionViewCell.xib in Resources */,
 				932450CA2DFC7FD300C914AC /* LaunchScreen.storyboard in Resources */,
 				932450CB2DFC7FD300C914AC /* Main.storyboard in Resources */,
 				932450EE2DFDD2E100C914AC /* PostCollectionViewCell.xib in Resources */,
@@ -255,6 +262,7 @@
 				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
 				932450F12DFF17F500C914AC /* AddNewPostButton.swift in Sources */,
 				932450EB2DFDC4B600C914AC /* Comment.swift in Sources */,
+				936197412E008F3800244DD9 /* PostDetailCollectionViewCell.swift in Sources */,
 				932450E22DFCD43900C914AC /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

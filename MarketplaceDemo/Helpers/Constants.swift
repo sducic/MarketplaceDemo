@@ -9,10 +9,17 @@ import Foundation
 
 enum Constants
 {
+    //navigationControllerTitle
     static let navigationTitle = "Marketplace"
-    static let baseURL = "https://jsonplaceholder.typicode.com/posts"
     static let navigationTitleFontSize = 18.0
+    
+    //postCollectionView
     static let postCellHeightSize = 70.0
+    static let postCellWidthRatio = 0.95
     static let postCVCellIdentifier = "PostCollectionViewCell"
+    
+    //url
+    static let baseURL = "https://jsonplaceholder.typicode.com/posts"
+
 }
 

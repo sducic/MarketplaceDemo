@@ -85,15 +85,31 @@
                                     <constraint firstAttribute="height" constant="200" id="xEN-9L-0xH"/>
                                 </constraints>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d7C-s0-8HF">
+                                <rect key="frame" x="0.0" y="388" width="393" height="396"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YV2-nZ-dCP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lwl-RB-cdr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Hk-7X-BJ4" firstAttribute="top" secondItem="lwl-RB-cdr" secondAttribute="top" constant="50" id="7bw-xl-fQ5"/>
+                            <constraint firstItem="lwl-RB-cdr" firstAttribute="bottom" secondItem="d7C-s0-8HF" secondAttribute="bottom" id="7oA-C8-h6Y"/>
                             <constraint firstItem="2Hk-7X-BJ4" firstAttribute="centerX" secondItem="VVz-nb-Wwk" secondAttribute="centerX" id="CsS-hX-lrf"/>
+                            <constraint firstItem="lwl-RB-cdr" firstAttribute="trailing" secondItem="d7C-s0-8HF" secondAttribute="trailing" id="R22-77-bu7"/>
+                            <constraint firstItem="d7C-s0-8HF" firstAttribute="leading" secondItem="lwl-RB-cdr" secondAttribute="leading" id="kgy-5M-6MU"/>
+                            <constraint firstItem="d7C-s0-8HF" firstAttribute="top" secondItem="2Hk-7X-BJ4" secondAttribute="bottom" constant="20" id="vvh-FU-arv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="postDetailCollectionView" destination="d7C-s0-8HF" id="lm1-e7-gjX"/>
                         <outlet property="postImageView" destination="2Hk-7X-BJ4" id="xDu-6n-7pW"/>
                     </connections>
                 </viewController>

@@ -47,11 +47,12 @@ class PostCreateViewController: MainViewController
         Task {
                 do
                 {
-                    print(newPost)
-                    //TODO: url
-                    let urlString = "https://jsonplaceholder.typicode.com/posts"
-                    let newPost = try await NetworkManager.shared.createNewPostRequest(post: newPost, urlString: urlString)
-                    print("Created post with id: \(newPost.title)")
+                    let newPost = try await NetworkManager.shared.createNewPostRequest(post: newPost, urlString: APIEndpoint.createNewPostURL())
+                    DispatchQueue.main.async
+                    {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    print("Created post with title: \(newPost.title)")
                 } catch {
                     print("Failed to create post: \(error)")
                 }

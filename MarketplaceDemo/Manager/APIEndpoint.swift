@@ -25,4 +25,9 @@ struct APIEndpoint
     {
         return "https://picsum.photos/\(width)/\(height)"
     }
+    
+    static func createNewPostURL() -> String
+    {
+        return "\(baseURL)/posts"
+    }
 }

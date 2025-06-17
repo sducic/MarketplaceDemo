@@ -13,7 +13,6 @@ class NetworkManager
     static let shared = NetworkManager()
     private init() {}
     
-    //TODO: refactor NetworkManager
     func fetchData<T: Decodable>(urlString: String) async throws -> T
     {
         guard let url = URL(string: urlString) else {
@@ -38,14 +37,21 @@ class NetworkManager
         }
     }
     
-    //TODO: handle errors
     func fetchImage(urlString: String) async throws -> UIImage
     {
         guard let url = URL(string: urlString) else {
             throw AppError.invalidURL
         }
         
-        let (data, _) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse else  {
+                throw AppError.invalidResponse(statusCode: -1)
+        }
+
+        guard httpResponse.statusCode == 200 else   {
+                throw AppError.invalidResponse(statusCode: httpResponse.statusCode)
+        }
         
         guard let image = UIImage(data: data) else {
             throw AppError.invalidImage

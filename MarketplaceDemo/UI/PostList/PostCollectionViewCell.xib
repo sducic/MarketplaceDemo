@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="MarketplaceDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="277" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="by7-7m-tqO">
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="135"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-ZN-nDD">
+                                <rect key="frame" x="10" y="0.0" width="257" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-vg-YfD">
+                                <rect key="frame" x="10" y="85" width="257" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="q2p-vg-YfD" firstAttribute="top" secondItem="Ie6-ZN-nDD" secondAttribute="bottom" id="K2w-er-DVb"/>
+                            <constraint firstAttribute="trailing" secondItem="Ie6-ZN-nDD" secondAttribute="trailing" constant="10" id="L4w-23-tjS"/>
+                            <constraint firstItem="q2p-vg-YfD" firstAttribute="leading" secondItem="by7-7m-tqO" secondAttribute="leading" constant="10" id="bdt-Ez-GDI"/>
+                            <constraint firstItem="Ie6-ZN-nDD" firstAttribute="top" secondItem="by7-7m-tqO" secondAttribute="top" id="cXa-rj-suF"/>
+                            <constraint firstAttribute="bottom" secondItem="Ie6-ZN-nDD" secondAttribute="bottom" constant="50" id="eEK-BT-i1k"/>
+                            <constraint firstAttribute="bottom" secondItem="q2p-vg-YfD" secondAttribute="bottom" id="fZg-AI-bGo"/>
+                            <constraint firstAttribute="trailing" secondItem="q2p-vg-YfD" secondAttribute="trailing" constant="10" id="u8W-p4-Vhg"/>
+                            <constraint firstItem="Ie6-ZN-nDD" firstAttribute="leading" secondItem="by7-7m-tqO" secondAttribute="leading" constant="10" id="wMK-e1-UTW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="by7-7m-tqO" secondAttribute="trailing" id="CLg-QG-3dM"/>
+                <constraint firstItem="by7-7m-tqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TRa-0j-frh"/>
+                <constraint firstItem="by7-7m-tqO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UFi-zp-hoI"/>
+                <constraint firstAttribute="bottom" secondItem="by7-7m-tqO" secondAttribute="bottom" id="cqT-jt-qjV"/>
+            </constraints>
+            <size key="customSize" width="277" height="135"/>
+            <connections>
+                <outlet property="bodyLabel" destination="q2p-vg-YfD" id="wtA-Yh-8aF"/>
+                <outlet property="titleLabel" destination="Ie6-ZN-nDD" id="AZm-1p-v3t"/>
+            </connections>
+            <point key="canvasLocation" x="92.36641221374046" y="11.619718309859156"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

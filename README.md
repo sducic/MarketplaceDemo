@@ -20,7 +20,7 @@ MarketplaceDemo is a simple iOS app demonstrating common features like fetching 
 <ul>
   <li>Fetches and displays detailed information about the selected post.</li>
   <li>Displays the first three comments related to the post.</li>
-  <li>Shows a placeholder image.</li>
+  <li>Displays a randomly generated image fetched from https://picsum.photos/.</li>
 </ul>
 
 <h5>Create Post Screen</h5>
@@ -34,8 +34,8 @@ MarketplaceDemo is a simple iOS app demonstrating common features like fetching 
   <li>MVC: The project follows the Model-View-Controller design pattern.</li>
   <li>NetworkManager: A singleton class that handles all network operations.</li>
   <li>Pagination: Fetches posts in batches with a fixed limit of 20 items per request.</li>
-  <li>Async/Await: asynchronous network calls.</li>
-  <li>Unit Tests: Contains basic tests coverage.</li>
+  <li>Async/Await: Asynchronous network calls.</li>
+  <li>Unit Tests: Provides basic test coverage.</li>
 </ul>
 
 ## Get Started

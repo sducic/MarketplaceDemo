@@ -32,7 +32,18 @@
 		936197492E00DD4900244DD9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197482E00DD4900244DD9 /* AppError.swift */; };
 		9361974C2E01804A00244DD9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361974B2E01804A00244DD9 /* APIEndpoint.swift */; };
 		9361974E2E01934900244DD9 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361974D2E01934900244DD9 /* Pagination.swift */; };
+		9361975E2E01B4C000244DD9 /* MarketplaceDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361975C2E01B4C000244DD9 /* MarketplaceDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		936197572E01B4A800244DD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9324508E2DFB395600C914AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 932450952DFB395600C914AC;
+			remoteInfo = MarketplaceDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		932450962DFB395600C914AC /* MarketplaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketplaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +73,19 @@
 		936197482E00DD4900244DD9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9361974B2E01804A00244DD9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		9361974D2E01934900244DD9 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		936197532E01B4A700244DD9 /* MarketplaceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketplaceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9361975C2E01B4C000244DD9 /* MarketplaceDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceDemoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		932450932DFB395600C914AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936197502E01B4A700244DD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				932450C72DFC7FD300C914AC /* MarketplaceDemo */,
+				9361975D2E01B4C000244DD9 /* MarketplaceDemoTests */,
 				932450972DFB395600C914AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				932450962DFB395600C914AC /* MarketplaceDemo.app */,
+				936197532E01B4A700244DD9 /* MarketplaceDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +234,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9361975D2E01B4C000244DD9 /* MarketplaceDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9361975C2E01B4C000244DD9 /* MarketplaceDemoTests.swift */,
+			);
+			path = MarketplaceDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +264,26 @@
 			productReference = 932450962DFB395600C914AC /* MarketplaceDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		936197522E01B4A700244DD9 /* MarketplaceDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 936197592E01B4A800244DD9 /* Build configuration list for PBXNativeTarget "MarketplaceDemoTests" */;
+			buildPhases = (
+				9361974F2E01B4A700244DD9 /* Sources */,
+				936197502E01B4A700244DD9 /* Frameworks */,
+				936197512E01B4A700244DD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				936197582E01B4A800244DD9 /* PBXTargetDependency */,
+			);
+			name = MarketplaceDemoTests;
+			packageProductDependencies = (
+			);
+			productName = MarketplaceDemoTests;
+			productReference = 936197532E01B4A700244DD9 /* MarketplaceDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +296,10 @@
 				TargetAttributes = {
 					932450952DFB395600C914AC = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					936197522E01B4A700244DD9 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 932450952DFB395600C914AC;
 					};
 				};
 			};
@@ -264,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				932450952DFB395600C914AC /* MarketplaceDemo */,
+				936197522E01B4A700244DD9 /* MarketplaceDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +334,13 @@
 				932450CA2DFC7FD300C914AC /* LaunchScreen.storyboard in Resources */,
 				932450CB2DFC7FD300C914AC /* Main.storyboard in Resources */,
 				932450EE2DFDD2E100C914AC /* PostCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		936197512E01B4A700244DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +373,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9361974F2E01B4A700244DD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9361975E2E01B4C000244DD9 /* MarketplaceDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		936197582E01B4A800244DD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 932450952DFB395600C914AC /* MarketplaceDemo */;
+			targetProxy = 936197572E01B4A800244DD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		932450C22DFC7FD300C914AC /* LaunchScreen.storyboard */ = {
@@ -520,6 +598,42 @@
 			};
 			name = Release;
 		};
+		9361975A2E01B4A800244DD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G69MBT8U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sducic.MarketplaceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarketplaceDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarketplaceDemo";
+			};
+			name = Debug;
+		};
+		9361975B2E01B4A800244DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G69MBT8U6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sducic.MarketplaceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarketplaceDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarketplaceDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,6 +651,15 @@
 			buildConfigurations = (
 				932450AA2DFB395700C914AC /* Debug */,
 				932450AB2DFB395700C914AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		936197592E01B4A800244DD9 /* Build configuration list for PBXNativeTarget "MarketplaceDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9361975A2E01B4A800244DD9 /* Debug */,
+				9361975B2E01B4A800244DD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

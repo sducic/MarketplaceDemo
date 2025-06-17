@@ -72,14 +72,13 @@ class PostDetailViewController: MainViewController
     {
         postDetailCollectionView.delegate = self
         postDetailCollectionView.dataSource = self
-        
-        registerPostCell()
+        registerPostDetailCell()
     }
     
-    func registerPostCell()
+    func registerPostDetailCell()
     {
-        let nib = UINib(nibName: "PostDetailCollectionViewCell", bundle: nil)
-        postDetailCollectionView.register(nib, forCellWithReuseIdentifier: "PostDetailCollectionViewCell")
+        let nib = UINib(nibName: PostDetailCollectionViewCell.reuseIdentifier, bundle: nil)
+        postDetailCollectionView.register(nib, forCellWithReuseIdentifier: PostDetailCollectionViewCell.reuseIdentifier)
     }
 }
 
@@ -93,7 +92,7 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         //TODO: refactor
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostDetailCollectionViewCell", for: indexPath) as! PostDetailCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostDetailCollectionViewCell.reuseIdentifier, for: indexPath) as! PostDetailCollectionViewCell
         cell.set(comment: comments[indexPath.item])
         return cell
     }
@@ -102,7 +101,7 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     {
        
         //TODO: refactor
-        return CGSize(width:collectionView.frame.width * Constants.postCellWidthRatio, height: 80)
+        return CGSize(width:collectionView.frame.width * Constants.cellWidthRatio, height: Constants.postDetailCellHeightSize)
     }
     
 }

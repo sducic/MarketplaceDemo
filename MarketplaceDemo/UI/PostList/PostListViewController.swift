@@ -41,14 +41,13 @@ class PostListViewController: MainViewController
     {
         postCollectionView.delegate = self
         postCollectionView.dataSource = self
-        
         registerPostCell()
     }
     
     func registerPostCell()
     {
-        let nib = UINib(nibName: Constants.postCVCellIdentifier, bundle: nil)
-        postCollectionView.register(nib, forCellWithReuseIdentifier: Constants.postCVCellIdentifier)
+        let nib = UINib(nibName: PostCollectionViewCell.reuseIdentifier, bundle: nil)
+        postCollectionView.register(nib, forCellWithReuseIdentifier: PostCollectionViewCell.reuseIdentifier)
     }
     
     func setupAddNewPostButton()
@@ -106,7 +105,7 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.postCVCellIdentifier, for: indexPath) as! PostCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.reuseIdentifier, for: indexPath) as! PostCollectionViewCell
         cell.set(post: posts[indexPath.item])
         return cell
     }
@@ -114,14 +113,14 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "PostDetailVC") as! PostDetailViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
         viewController.postId = posts[indexPath.item].id
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:collectionView.frame.width * Constants.postCellWidthRatio, height: Constants.postCellHeightSize)
+        return CGSize(width:collectionView.frame.width * Constants.cellWidthRatio, height: Constants.postCellHeightSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)

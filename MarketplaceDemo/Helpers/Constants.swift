@@ -16,10 +16,10 @@ enum Constants
     static let navigationTitle = "Marketplace"
     static let navigationTitleFontSize = 18.0
     
-    //postCollectionView
+    //collectionView
     static let postCellHeightSize = 70.0
-    static let postCellWidthRatio = 0.95
-    static let postCVCellIdentifier = "PostCollectionViewCell"
+    static let postDetailCellHeightSize = 80.0
+    static let cellWidthRatio = 0.95
     
     //url
     static let baseURL = "https://jsonplaceholder.typicode.com/posts"

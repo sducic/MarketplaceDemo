@@ -11,7 +11,6 @@ import UIKit
 class NetworkManager
 {
     static let shared = NetworkManager()
-        
     private init() {}
     
     //TODO: refactor NetworkManager

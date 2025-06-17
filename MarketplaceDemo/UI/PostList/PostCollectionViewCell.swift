@@ -9,6 +9,8 @@ import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell
 {
+    static let reuseIdentifier = String(describing: PostCollectionViewCell.self)
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     

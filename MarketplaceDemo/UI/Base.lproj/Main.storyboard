@@ -89,7 +89,7 @@
         <!--Post Detail View Controller-->
         <scene sceneID="V9b-wa-Yg1">
             <objects>
-                <viewController storyboardIdentifier="PostDetailVC" id="Kyj-bz-P5h" customClass="PostDetailViewController" customModule="MarketplaceDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailViewController" id="Kyj-bz-P5h" customClass="PostDetailViewController" customModule="MarketplaceDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VVz-nb-Wwk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

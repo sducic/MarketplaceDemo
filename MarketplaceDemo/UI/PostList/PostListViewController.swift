@@ -92,7 +92,6 @@ class PostListViewController: MainViewController
     
     @objc private func addNewPostTapped()
     {
-        //TODO: refactor?
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let postCreateVC = storyboard.instantiateViewController(withIdentifier: "PostCreateViewController") as! PostCreateViewController
         navigationController?.pushViewController(postCreateVC, animated: true)

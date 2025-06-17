@@ -30,8 +30,7 @@ class AddNewPostButton: UIButton
     
     private func setup()
     {
-        //TODO: handle image?
-        let addImage = UIImage(named: "btn_add")
+        let addImage = UIImage(named: Constants.addNewPostButtonName) ?? UIImage(systemName: "plus.circle")
         let tintedImage = addImage?.withRenderingMode(.alwaysTemplate)
         setImage(tintedImage, for: .normal)
         tintColor = UIColor.white

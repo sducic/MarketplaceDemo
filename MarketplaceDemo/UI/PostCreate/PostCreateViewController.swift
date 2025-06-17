@@ -48,7 +48,9 @@ class PostCreateViewController: MainViewController
                 do
                 {
                     print(newPost)
-                    let newPost = try await NetworkManager.shared.createNewPostRequest(post: newPost)
+                    //TODO: url
+                    let urlString = "https://jsonplaceholder.typicode.com/posts"
+                    let newPost = try await NetworkManager.shared.createNewPostRequest(post: newPost, urlString: urlString)
                     print("Created post with id: \(newPost.title)")
                 } catch {
                     print("Failed to create post: \(error)")

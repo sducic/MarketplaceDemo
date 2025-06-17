@@ -67,8 +67,9 @@ class PostListViewController: MainViewController
     {
         Task {
                 do {
-                    print("CALL")
-                    let newPosts = try await NetworkManager.shared.fetchPost(page: page, limit: limit)
+                    //TODO: url
+                    let urlString = "https://jsonplaceholder.typicode.com/posts?_page=\(page)&_limit=\(limit)"
+                    let newPosts: [Post] = try await NetworkManager.shared.fetchData(urlString: urlString)
                     guard !newPosts.isEmpty else { return }
                     
                     self.posts.append(contentsOf: newPosts)

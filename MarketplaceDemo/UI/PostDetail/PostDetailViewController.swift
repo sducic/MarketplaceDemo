@@ -39,7 +39,9 @@ class PostDetailViewController: MainViewController
     {
         Task {
                 do {
-                    let postImage = try await NetworkManager.shared.fetchImage()
+                    //TODO: url
+                    let urlString = "https://picsum.photos/300/200"
+                    let postImage = try await NetworkManager.shared.fetchImage(urlString: urlString)
                     
                     DispatchQueue.main.async    {
                         self.postImageView.image = postImage
@@ -54,7 +56,9 @@ class PostDetailViewController: MainViewController
     {
         Task {
                 do {
-                    let comments = try await NetworkManager.shared.fetchComment(postId: postId)
+                    //TODO: url
+                    let urlString = "https://jsonplaceholder.typicode.com/comments?postId=\(postId)"
+                    let comments: [Comment] = try await NetworkManager.shared.fetchData(urlString: urlString)
                     guard !comments.isEmpty else { return }
                     
                     self.comments = comments

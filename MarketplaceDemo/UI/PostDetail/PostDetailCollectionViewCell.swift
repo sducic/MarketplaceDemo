@@ -26,5 +26,4 @@ class PostDetailCollectionViewCell: UICollectionViewCell
         emailLabel.text = comment.email
         bodyLabel.text = comment.body
     }
-
 }

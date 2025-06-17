@@ -85,7 +85,6 @@ class PostListViewController: MainViewController
                 } catch {
                     print("Error: \(error)")
                 }
-            
                 self.pagination.isLoading = false
             }
     }
@@ -98,7 +97,6 @@ class PostListViewController: MainViewController
     }
 }
 
-//TODO: update CollectionView with the new data instead of reload?
 extension PostListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -130,7 +128,6 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     {
         if indexPath.item == posts.count - 1
         {
-            print("end")
             fetchPostData(page: pagination.page, limit: pagination.limit)
         }
     }

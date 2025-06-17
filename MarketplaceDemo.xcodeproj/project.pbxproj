@@ -30,6 +30,7 @@
 		936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197442E00999000244DD9 /* PostCreateViewController.swift */; };
 		936197472E00C43B00244DD9 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197462E00C43B00244DD9 /* NewPost.swift */; };
 		936197492E00DD4900244DD9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197482E00DD4900244DD9 /* AppError.swift */; };
+		9361974C2E01804A00244DD9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361974B2E01804A00244DD9 /* APIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		936197442E00999000244DD9 /* PostCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewController.swift; sourceTree = "<group>"; };
 		936197462E00C43B00244DD9 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
 		936197482E00DD4900244DD9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		9361974B2E01804A00244DD9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,6 @@
 				932450E82DFDC2D000C914AC /* Post.swift */,
 				936197462E00C43B00244DD9 /* NewPost.swift */,
 				932450EA2DFDC4B600C914AC /* Comment.swift */,
-				936197482E00DD4900244DD9 /* AppError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				932450F62DFF8F5900C914AC /* NetworkManager.swift */,
+				9361974B2E01804A00244DD9 /* APIEndpoint.swift */,
+				936197482E00DD4900244DD9 /* AppError.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932450F72DFF8F5900C914AC /* NetworkManager.swift in Sources */,
+				9361974C2E01804A00244DD9 /* APIEndpoint.swift in Sources */,
 				932450E42DFCDA4C00C914AC /* NavigationControllerTitleLabel.swift in Sources */,
 				932450CC2DFC7FD300C914AC /* AppDelegate.swift in Sources */,
 				932450EF2DFDD2E100C914AC /* PostCollectionViewCell.swift in Sources */,

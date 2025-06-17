@@ -21,6 +21,14 @@ enum Constants
     static let postDetailCellHeightSize = 80.0
     static let cellWidthRatio = 0.95
     
+    //numOfComments
+    static let numOfCommentsLimit = 3
+    static let postImageSizeHeight = 200
+    static let postImageSizeWidth = 300
+    
+    //addNewPostButton
+    static let addNewPostButtonSize = 45.0
+    
     //url
     static let baseURL = "https://jsonplaceholder.typicode.com/posts"
 

@@ -39,9 +39,7 @@ class PostDetailViewController: MainViewController
     {
         Task {
                 do {
-                    //TODO: url
-                    let urlString = "https://picsum.photos/300/200"
-                    let postImage = try await NetworkManager.shared.fetchImage(urlString: urlString)
+                    let postImage = try await NetworkManager.shared.fetchImage(urlString: APIEndpoint.createImageURL(width: Constants.postImageSizeWidth, height: Constants.postImageSizeHeight))
                     
                     DispatchQueue.main.async    {
                         self.postImageView.image = postImage
@@ -56,9 +54,7 @@ class PostDetailViewController: MainViewController
     {
         Task {
                 do {
-                    //TODO: url
-                    let urlString = "https://jsonplaceholder.typicode.com/comments?postId=\(postId)"
-                    let comments: [Comment] = try await NetworkManager.shared.fetchData(urlString: urlString)
+                    let comments: [Comment] = try await NetworkManager.shared.fetchData(urlString: APIEndpoint.createCommentURL(postId: postId, limit: Constants.numOfCommentsLimit))
                     guard !comments.isEmpty else { return }
                     
                     self.comments = comments
@@ -91,11 +87,11 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return comments.count
+        //return min(comments.count, Constants.numOfComments)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        //TODO: refactor
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostDetailCollectionViewCell.reuseIdentifier, for: indexPath) as! PostDetailCollectionViewCell
         cell.set(comment: comments[indexPath.item])
         return cell
@@ -104,7 +100,6 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
        
-        //TODO: refactor
         return CGSize(width:collectionView.frame.width * Constants.cellWidthRatio, height: Constants.postDetailCellHeightSize)
     }
     

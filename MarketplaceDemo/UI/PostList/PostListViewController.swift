@@ -58,8 +58,8 @@ class PostListViewController: MainViewController
         NSLayoutConstraint.activate([
             addNewPostButton.centerXAnchor.constraint(equalTo: postFooterView.centerXAnchor),
             addNewPostButton.centerYAnchor.constraint(equalTo: postFooterView.centerYAnchor),
-            addNewPostButton.widthAnchor.constraint(equalToConstant: 45),
-            addNewPostButton.heightAnchor.constraint(equalToConstant: 45)
+            addNewPostButton.widthAnchor.constraint(equalToConstant: Constants.addNewPostButtonSize),
+            addNewPostButton.heightAnchor.constraint(equalToConstant: Constants.addNewPostButtonSize)
         ])
     }
     
@@ -67,9 +67,7 @@ class PostListViewController: MainViewController
     {
         Task {
                 do {
-                    //TODO: url
-                    let urlString = "https://jsonplaceholder.typicode.com/posts?_page=\(page)&_limit=\(limit)"
-                    let newPosts: [Post] = try await NetworkManager.shared.fetchData(urlString: urlString)
+                    let newPosts: [Post] = try await NetworkManager.shared.fetchData(urlString: APIEndpoint.createPostURL(page: page, limit: limit))
                     guard !newPosts.isEmpty else { return }
                     
                     self.posts.append(contentsOf: newPosts)
@@ -86,6 +84,7 @@ class PostListViewController: MainViewController
     
     @objc private func addNewPostTapped()
     {
+        //TODO: refactor?
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let postCreateVC = storyboard.instantiateViewController(withIdentifier: "PostCreateViewController") as! PostCreateViewController
         navigationController?.pushViewController(postCreateVC, animated: true)

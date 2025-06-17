@@ -35,7 +35,7 @@ MarketplaceDemo is a simple iOS app demonstrating common features like fetching 
   <li>NetworkManager: A singleton class that handles all network operations.</li>
   <li>Pagination: Fetches posts in batches with a fixed limit of 20 items per request.</li>
   <li>Async/Await: asynchronous network calls.</li>
-  <li>Unit Tests: Contains basic tests coverage</li>
+  <li>Unit Tests: Contains basic tests coverage.</li>
 </ul>
 
 ## Get Started

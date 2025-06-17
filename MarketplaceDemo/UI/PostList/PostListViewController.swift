@@ -10,10 +10,7 @@ import UIKit
 class PostListViewController: MainViewController
 {
     var posts = [Post]()
-    var page = 1
-    let limit = 20
-    var isLoading = false
-    
+    var pagination = Pagination()
     
     @IBOutlet weak var postCollectionView: UICollectionView!
     @IBOutlet weak var postFooterView: UIView!
@@ -29,7 +26,7 @@ class PostListViewController: MainViewController
     {
         super.viewDidLoad()
         setupUI()
-        fetchPostData(page: page, limit: limit)
+        fetchPostData(page: pagination.page, limit: pagination.limit)
     }
     
     override func setupUI()
@@ -67,31 +64,29 @@ class PostListViewController: MainViewController
     
     func fetchPostData(page: Int, limit: Int)
     {
-        guard !isLoading else { return }
-        isLoading = true
+        guard !pagination.isLoading else { return }
+        pagination.isLoading = true
         
         Task {
                 do {
                     let newPosts: [Post] = try await NetworkManager.shared.fetchData(urlString: APIEndpoint.createPostURL(page: page, limit: limit))
                     guard !newPosts.isEmpty else
                     {
-                        isLoading = false
+                        pagination.isLoading = false
                         return
                     }
 
                     self.posts.append(contentsOf: newPosts)
-                    self.page += 1
+                    self.pagination.nextPage()
                     
                     DispatchQueue.main.async    {
                         self.postCollectionView.reloadData()
-                        self.isLoading = false
                     }
                 } catch {
                     print("Error: \(error)")
-                    DispatchQueue.main.async    {
-                        self.isLoading = false
-                    }
                 }
+            
+                self.pagination.isLoading = false
             }
     }
     
@@ -137,7 +132,7 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
         if indexPath.item == posts.count - 1
         {
             print("end")
-            fetchPostData(page: page, limit: limit)
+            fetchPostData(page: pagination.page, limit: pagination.limit)
         }
     }
 }

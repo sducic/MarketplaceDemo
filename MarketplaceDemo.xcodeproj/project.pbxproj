@@ -31,6 +31,7 @@
 		936197472E00C43B00244DD9 /* NewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197462E00C43B00244DD9 /* NewPost.swift */; };
 		936197492E00DD4900244DD9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936197482E00DD4900244DD9 /* AppError.swift */; };
 		9361974C2E01804A00244DD9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361974B2E01804A00244DD9 /* APIEndpoint.swift */; };
+		9361974E2E01934900244DD9 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361974D2E01934900244DD9 /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		936197462E00C43B00244DD9 /* NewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPost.swift; sourceTree = "<group>"; };
 		936197482E00DD4900244DD9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9361974B2E01804A00244DD9 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		9361974D2E01934900244DD9 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				932450E82DFDC2D000C914AC /* Post.swift */,
 				936197462E00C43B00244DD9 /* NewPost.swift */,
 				932450EA2DFDC4B600C914AC /* Comment.swift */,
+				9361974D2E01934900244DD9 /* Pagination.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				936197492E00DD4900244DD9 /* AppError.swift in Sources */,
 				932450CD2DFC7FD300C914AC /* SceneDelegate.swift in Sources */,
 				936197472E00C43B00244DD9 /* NewPost.swift in Sources */,
+				9361974E2E01934900244DD9 /* Pagination.swift in Sources */,
 				932450CE2DFC7FD300C914AC /* PostListViewController.swift in Sources */,
 				932450DA2DFCD05900C914AC /* Constants.swift in Sources */,
 				936197452E00999000244DD9 /* PostCreateViewController.swift in Sources */,

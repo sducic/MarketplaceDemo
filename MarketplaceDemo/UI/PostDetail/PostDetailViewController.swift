@@ -28,11 +28,23 @@ class PostDetailViewController: MainViewController
         setupDetailPostCollectionView()
     }
     
+    func setupDetailPostCollectionView()
+    {
+        postDetailCollectionView.delegate = self
+        postDetailCollectionView.dataSource = self
+        registerPostDetailCell()
+    }
+    
+    func registerPostDetailCell()
+    {
+        let nib = UINib(nibName: PostDetailCollectionViewCell.reuseIdentifier, bundle: nil)
+        postDetailCollectionView.register(nib, forCellWithReuseIdentifier: PostDetailCollectionViewCell.reuseIdentifier)
+    }
+    
     func fetchData()
     {
         loadImage()
-        //TODO: handle error
-        loadComment(postId: postId ?? 0)
+        loadComment()
     }
     
     func loadImage()
@@ -50,8 +62,10 @@ class PostDetailViewController: MainViewController
             }
     }
     
-    func loadComment(postId: Int)
+    func loadComment()
     {
+        guard let postId = postId else { return }
+        
         Task {
                 do {
                     let comments: [Comment] = try await NetworkManager.shared.fetchData(urlString: APIEndpoint.createCommentURL(postId: postId, limit: Constants.numOfCommentsLimit))
@@ -67,19 +81,6 @@ class PostDetailViewController: MainViewController
                 }
             }
     }
-    
-    func setupDetailPostCollectionView()
-    {
-        postDetailCollectionView.delegate = self
-        postDetailCollectionView.dataSource = self
-        registerPostDetailCell()
-    }
-    
-    func registerPostDetailCell()
-    {
-        let nib = UINib(nibName: PostDetailCollectionViewCell.reuseIdentifier, bundle: nil)
-        postDetailCollectionView.register(nib, forCellWithReuseIdentifier: PostDetailCollectionViewCell.reuseIdentifier)
-    }
 }
 
 extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -87,7 +88,6 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return comments.count
-        //return min(comments.count, Constants.numOfComments)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell

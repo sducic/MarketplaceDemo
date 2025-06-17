@@ -29,8 +29,5 @@ enum Constants
     //addNewPostButton
     static let addNewPostButtonSize = 45.0
     
-    //url
-    static let baseURL = "https://jsonplaceholder.typicode.com/posts"
-
 }
 

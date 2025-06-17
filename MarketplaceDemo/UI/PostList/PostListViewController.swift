@@ -12,6 +12,8 @@ class PostListViewController: MainViewController
     var posts = [Post]()
     var page = 1
     let limit = 20
+    var isLoading = false
+    
     
     @IBOutlet weak var postCollectionView: UICollectionView!
     @IBOutlet weak var postFooterView: UIView!
@@ -65,19 +67,30 @@ class PostListViewController: MainViewController
     
     func fetchPostData(page: Int, limit: Int)
     {
+        guard !isLoading else { return }
+        isLoading = true
+        
         Task {
                 do {
                     let newPosts: [Post] = try await NetworkManager.shared.fetchData(urlString: APIEndpoint.createPostURL(page: page, limit: limit))
-                    guard !newPosts.isEmpty else { return }
-                    
+                    guard !newPosts.isEmpty else
+                    {
+                        isLoading = false
+                        return
+                    }
+
                     self.posts.append(contentsOf: newPosts)
                     self.page += 1
                     
                     DispatchQueue.main.async    {
                         self.postCollectionView.reloadData()
+                        self.isLoading = false
                     }
                 } catch {
                     print("Error: \(error)")
+                    DispatchQueue.main.async    {
+                        self.isLoading = false
+                    }
                 }
             }
     }
@@ -89,13 +102,9 @@ class PostListViewController: MainViewController
         let postCreateVC = storyboard.instantiateViewController(withIdentifier: "PostCreateViewController") as! PostCreateViewController
         navigationController?.pushViewController(postCreateVC, animated: true)
     }
-
-    
-    //TODO: update CollectionView with the new data instead of reload?
-    
 }
 
-
+//TODO: update CollectionView with the new data instead of reload?
 extension PostListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

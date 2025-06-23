@@ -51,7 +51,6 @@ class PostListViewController: MainViewController
     
     func setupAddNewPostButton()
     {
-        addNewPostButton.translatesAutoresizingMaskIntoConstraints = false
         postFooterView.addSubview(addNewPostButton)
         
         NSLayoutConstraint.activate([

@@ -100,7 +100,7 @@ extension PostDetailViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
        
-        return CGSize(width:collectionView.frame.width * Constants.cellWidthRatio, height: Constants.postDetailCellHeightSize)
+        return CGSize(width:collectionView.frame.width * Constants.postDetailCellWidthRatio, height: Constants.postDetailCellHeightSize)
     }
     
 }

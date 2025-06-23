@@ -120,7 +120,7 @@ extension PostListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width:collectionView.frame.width * Constants.cellWidthRatio, height: Constants.postCellHeightSize)
+        return CGSize(width:collectionView.frame.width * Constants.postCellWidthRatio, height: Constants.postCellHeightSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)

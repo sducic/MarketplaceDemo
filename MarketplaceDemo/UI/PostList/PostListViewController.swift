@@ -10,7 +10,7 @@ import UIKit
 class PostListViewController: MainViewController
 {
     var posts = [Post]()
-    var pagination = Pagination()
+    var pagination = Pagination(page: Constants.paginationStartPage, limit: Constants.paginationLimit)
     
     @IBOutlet weak var postCollectionView: UICollectionView!
     @IBOutlet weak var postFooterView: UIView!

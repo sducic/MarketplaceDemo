@@ -29,5 +29,9 @@ enum Constants
     //addNewPostButton
     static let addNewPostButtonSize = 45.0
     static let addNewPostButtonName = "btn_add"
+    
+    //pagination
+    static let paginationStartPage = 1
+    static let paginationLimit = 20
 }
 

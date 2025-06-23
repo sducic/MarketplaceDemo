@@ -13,7 +13,7 @@ final class MarketplaceDemoTests: XCTestCase
     //in case the requirement is to implement pagination with a limit of 20
     func testFetchPostPaginationLimit()
     {
-        let pagination = Pagination()
+        let pagination = Pagination(page: Constants.paginationStartPage, limit: Constants.paginationLimit)
         XCTAssertEqual(pagination.limit, 20)
     }
 

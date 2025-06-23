@@ -9,9 +9,15 @@ import Foundation
 
 struct Pagination
 {
-    var page = 1
-    let limit = 20
-    var isLoading = false
+    var page : Int
+    let limit : Int
+    var isLoading : Bool = false
+    
+    init(page: Int, limit: Int)
+    {
+        self.page = page
+        self.limit = limit
+    }
 
     mutating func nextPage()
     {

@@ -10,5 +10,5 @@ import UIKit
 
 extension UIColor
 {
-    static var navigationTitleTextColor : UIColor { return UIColor(named:"navigationTitleTextColor")! }
+    static var navigationControllerTitleTextColor : UIColor { return UIColor(named:"navigationControllerTitleTextColor")! }
 }

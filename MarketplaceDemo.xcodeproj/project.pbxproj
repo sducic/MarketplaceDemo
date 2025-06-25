@@ -172,10 +172,9 @@
 		932450E52DFDC29200C914AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				932450E82DFDC2D000C914AC /* Post.swift */,
-				936197462E00C43B00244DD9 /* NewPost.swift */,
-				932450EA2DFDC4B600C914AC /* Comment.swift */,
-				9361974D2E01934900244DD9 /* Pagination.swift */,
+				93ADC56E2E0B64F900C9ED4E /* Post */,
+				93ADC56F2E0B650300C9ED4E /* Comment */,
+				93ADC5702E0B651A00C9ED4E /* Pagination */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +239,31 @@
 				9361975C2E01B4C000244DD9 /* MarketplaceDemoTests.swift */,
 			);
 			path = MarketplaceDemoTests;
+			sourceTree = "<group>";
+		};
+		93ADC56E2E0B64F900C9ED4E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				932450E82DFDC2D000C914AC /* Post.swift */,
+				936197462E00C43B00244DD9 /* NewPost.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		93ADC56F2E0B650300C9ED4E /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				932450EA2DFDC4B600C914AC /* Comment.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		93ADC5702E0B651A00C9ED4E /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				9361974D2E01934900244DD9 /* Pagination.swift */,
+			);
+			path = Pagination;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
